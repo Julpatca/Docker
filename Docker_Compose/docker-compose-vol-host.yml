@@ -1,0 +1,8 @@
+services:
+  web:
+    container_name: nginx-vol-host
+    ports:
+      - "8080:80"
+    volumes:
+      - "/home/julio/docker-images/coffee-shop-html-template:/usr/share/nginx/html"
+    image: nginx
