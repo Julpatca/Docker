@@ -1,0 +1,7 @@
+services:
+  web:
+    container_name: python
+    image: python:alpine3.23
+    command: python -m http.server 8080
+    ports:
+      - "8080:8080"
