@@ -1,0 +1,10 @@
+services:
+  web:
+    container_name: nginx-vol
+    ports:
+      - "8080:80"
+    volumes:
+      - "vol-test:/usr/share/nginx/html"
+    image: nginx
+volumes:
+  vol-test:
