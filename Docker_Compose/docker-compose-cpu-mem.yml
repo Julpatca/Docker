@@ -1,0 +1,8 @@
+services:
+  web:
+    container_name: nginx
+    ports:
+      - "8080:80"
+    mem_limit: 20m
+    cpuset: "0"
+    image: nginx
