@@ -1,0 +1,23 @@
+services:
+  drupal:
+    container_name: drupal
+    volumes:
+      - drupal-vol:/var/www/html
+    image: drupal
+    ports:
+      - 8080:80
+    networks:
+      - net-drupal
+  postgres:
+    container_name: postgres-drupal
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: welcome1
+    volumes:
+      - $PWD/data-postgres:/var/lib/postgresql/18/docker
+    networks:
+      - net-drupal
+volumes:
+  drupal-vol:
+networks:
+  net-drupal:
