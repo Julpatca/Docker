@@ -1,0 +1,8 @@
+#FROM rockylinux:8.9
+FROM almalinux:8.10
+
+RUN echo "hola" > /tmp/hola && echo hola >> /tmp/hola1
+
+RUN echo "bye" > /tmp/bye2
+
+RUN echo "test" > /tmp/test1
